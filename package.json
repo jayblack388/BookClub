@@ -1,0 +1,31 @@
+{
+  "name": "bookclub",
+  "version": "1.0.0",
+  "description": "Web App for finding/suggesting books to users",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayblack388/BookClub.git"
+  },
+  "keywords": [
+    "Bootcamp",
+    "Book",
+    "BookClub"
+  ],
+  "author": "Victor Cañas, Sahir Shehzad, John Blackwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayblack388/BookClub/issues"
+  },
+  "homepage": "https://github.com/jayblack388/BookClub#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.33.4"
+  }
+}
