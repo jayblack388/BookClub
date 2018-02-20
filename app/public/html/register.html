@@ -9,8 +9,8 @@
         src="http://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/register.css">    
-    <script src="../js/register.js"></script>
+    <link rel="stylesheet" href="/static/css/register.css">    
+    <script src="/static/js/register.js"></script>
 </head>
 <body>
     <div id="background">
@@ -18,11 +18,11 @@
         <div id="loginContainer">
 
             <div id='inputContainer'>
-                <form id='loginForm' action='register.php' method='POST'>
+                <form id='loginForm' method='POST'>
                     <h2>Login to your account</h2>
                     <p>
                         <label for="loginUsername">Username</label>
-                        <input id='loginUsername' name='loginUsername' type='text' placeholder='e.g. johnDoe' value="" required>
+                        <input id='loginUsername' name='loginUsername' type='text' placeholder='e.g. johnDoe' required>
                     </p>
                     <p>
                         <label for="loginPassword">Password</label>
@@ -37,41 +37,41 @@
                 
                 </form>
 
-                <form id='registerForm' action='register.php' method='POST'>
+                <form id='registerForm' method='POST'>
                     <h2>Create a free account</h2>
                     <p>
                         <label for="username">Username</label>
-                        <input id='username' name='username' type='text' placeholder='e.g. johnDoe' value="" required>
+                        <input id='username' name='username' type='text' placeholder='e.g. johnDoe' required>
                     </p>
 
                     <p>
                         <label for="firstName">First Name</label>
-                        <input id='firstName' name='firstName' type='text' placeholder='e.g. John' value="" required>
+                        <input id='firstName' name='firstName' type='text' placeholder='e.g. John' required>
                     </p>
 
                     <p>
                         <label for="lastName">Last Name</label>
-                        <input id='lastName' name='lastName' type='text' placeholder='e.g. Doe' value="" required>
+                        <input id='lastName' name='lastName' type='text' placeholder='e.g. Doe' required>
                     </p>
 
                     <p>
                         <label for="email">Email</label>
-                        <input id='email' name='email' type='email' placeholder='e.g. johnDoe@gmail.com' value="" required>
+                        <input id='email' name='email' type='email' placeholder='e.g. johnDoe@gmail.com' required>
                     </p>
 
                     <p>
                         <label for="email2">Confirm Email</label>
-                        <input id='email2' name='email2' type='email' placeholder='e.g. johnDoe@gmail.com' value="" required>
+                        <input id='email2' name='email2' type='email' placeholder='e.g. johnDoe@gmail.com' required>
                     </p>
 
                     <p>
                         <label for="password">Password</label>
-                        <input id='password' name='password' type='password' placeholder='Your Password' value="" required>
+                        <input id='password' name='password' type='password' placeholder='Your Password' required>
                     </p>
 
                     <p>
                         <label for="password2">Confirm Password</label>
-                        <input id='password2' name='password2' type='password' placeholder='Your Password' value="" required>
+                        <input id='password2' name='password2' type='password' placeholder='Your Password' required>
                     </p>
 
                     <button type='submit' name='registerButton'>SIGN UP</button>
