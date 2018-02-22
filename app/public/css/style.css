@@ -17,7 +17,7 @@ body {
 
 .activeLibraryContainer {
     width: 100%;
-    background-color: #282828;
+    background-color: #a8a8a8;
     bottom: 0;
     position: fixed;
     min-width: 620px;
@@ -36,7 +36,7 @@ body {
 }
 
 #navBarContainer {
-    background-color: #000;
+    background-color: #a8a8a8;
     width: 220px;
     height: 100vh;
     position: fixed;
@@ -150,4 +150,5 @@ body {
 
 #accordion .card {
     background-color: transparent;
+    border: none;
 }

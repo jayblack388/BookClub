@@ -5,12 +5,11 @@
     <script src="/static/js/search.js"></script>
 </head>
 <body>
-    <div class="container-fluid">    
-        <div id="mainContainer">
-            <div class="topContainer">
-                <% include ../partials/navBar %>
-                <% include ../partials/search %>
-            </div>
+    <div id="wrapper">
+        <% include ../partials/navBar %>
+        <div class="topContainer">
+            <% include ../partials/sidebar %>
+            <% include ../partials/searchPart %>
         </div>
     </div>    
     <% include ../partials/activeLibrary %>
