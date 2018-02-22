@@ -1,0 +1,52 @@
+#search {
+    background-color: #ececea; 
+    height: 18px;
+    font-size: 16px;
+    width: 40%;
+}
+
+#searchForm button {
+    background-color: transparent;
+    border: none;
+}
+
+#searchSubmit {
+    border: none;
+}
+
+#searchSubmit img {
+    max-height: 100%;
+    width: 25px;
+}
+
+#searchForm button:hover {
+    cursor: pointer;
+}
+
+.jumbotron {
+    background: #558C89;
+}
+
+.searchResult {
+    border: 3px solid #ececea;
+    border-radius: 2px;
+    margin-top: 50px;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.leftBookDiv {
+    background-color: #ececea;
+    overflow-y: auto;
+}
+
+.rightBookDiv {
+    text-align: center;
+    background-color: transparent;
+    padding: auto auto;
+}
+
+.resultThumbnail {
+    height: 84%;
+    width: 56%;
+}

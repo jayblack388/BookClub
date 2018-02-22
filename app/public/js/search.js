@@ -48,7 +48,7 @@ const returnResults = (results) => {
             let divTitle = $(`<h3 class='resultTitle'>Title: ${b.title} </h3>`);
             let divAuthor = $(`<h4 class='resultAuthor'>Author: ${b.author} </h4>`);
             let divDescrip = $(`<p class='resultDescription'>Description: ${b.descrip} </p>`);
-            let divImage = $("<img class='resultThumbnail'>").attr("src", b.thumb);
+            let divImage = $("<img class='img-fluid'>").attr("src", b.thumb);
             let buttons = $(`
             <div class="btn-group" role="group" aria-label="Search Result Buttons">
                 <button type="button" class="btn btn-secondary">Create a BookAThon</button>          
@@ -64,11 +64,17 @@ const returnResults = (results) => {
                     </div>
                 </div>
             </div>`)
+            let rowDiv = $("<div class='row'>");
+            let divEnd = $("</div>")
             leftDiv.append(divTitle);
             leftDiv.append(divAuthor);
             leftDiv.append(divDescrip);
+            rightDiv.append(rowDiv);
             rightDiv.append(divImage);
+            rightDiv.append(divEnd);
+            rightDiv.append(rowDiv);
             rightDiv.append(buttons);
+            rightDiv.append(divEnd);    
             bookDiv.append(leftDiv);
             bookDiv.append(rightDiv);
 
