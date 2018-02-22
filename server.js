@@ -3,12 +3,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-
+const ejs = require("ejs");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 const db = require("./app/models");
-
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
