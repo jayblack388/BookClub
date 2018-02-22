@@ -1,22 +1,27 @@
 $(document).ready(()=>{
+    $("#collapseOne, #collapseTwo, #collapseThree, #collapseFour").hide();
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-    $("#collapseOne").click(function(e) {
+    $("#toggleOne").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+        $("#bigWrapper").toggleClass("toggled");
+        $("#collapseOne").toggle();
     });
-    $("#collapseTwo").click(function(e) {
+    $("#toggleTwo").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+        $("#bigWrapper").toggleClass("toggled");
+        $("#collapseTwo").toggle();
     });
-    $("#collapseThree").click(function(e) {
+    $("#toggleThree").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+        $("#bigWrapper").toggleClass("toggled");
+        $("#collapseThree").toggle();
     });
-    $("#collapseFour").click(function(e) {
+    $("#toggleFour").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+        $("#bigWrapper").toggleClass("toggled");
+        $("#collapseFour").toggle();
     });
 })
