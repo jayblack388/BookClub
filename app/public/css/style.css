@@ -15,7 +15,7 @@ body {
     min-width: 720px;
 }
 
-#activeLibraryContainer {
+.activeLibraryContainer {
     width: 100%;
     background-color: #282828;
     bottom: 0;
@@ -23,7 +23,7 @@ body {
     min-width: 620px;
 }
 
-#activeLibrary {
+.activeLibrary {
     display: flex;
     height: 150px;
     padding: 16px;
@@ -146,4 +146,8 @@ body {
 .resultThumbnail {
     height: 84%;
     width: 56%;
+}
+
+#accordion .card {
+    background-color: transparent;
 }
