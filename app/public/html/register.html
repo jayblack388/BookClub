@@ -29,7 +29,7 @@
                         <input id='loginPassword' name='loginPassword' type='password' placeholder='Your Password' required>
                     </p>
 
-                    <button type='submit' name='loginButton'>LOG IN</button>
+                    <button id='loginButton' type='submit' name='loginButton'>LOG IN</button>
                 
                     <div class="hasAccountText">
 						<span id="hideLogin">Don't have an account yet? Signup here.</span>
@@ -39,10 +39,6 @@
 
                 <form id='registerForm' method='POST'>
                     <h2>Create a free account</h2>
-                    <p>
-                        <label for="username">Username</label>
-                        <input id='username' name='username' type='text' placeholder='e.g. johnDoe' required>
-                    </p>
 
                     <p>
                         <label for="email">Email</label>
@@ -50,21 +46,16 @@
                     </p>
 
                     <p>
-                        <label for="email2">Confirm Email</label>
-                        <input id='email2' name='email2' type='email' placeholder='e.g. johnDoe@gmail.com' required>
-                    </p>
-
-                    <p>
                         <label for="password">Password</label>
                         <input id='password' name='password' type='password' placeholder='Your Password' required>
                     </p>
 
-                    <p>
-                        <label for="password2">Confirm Password</label>
-                        <input id='password2' name='password2' type='password' placeholder='Your Password' required>
-                    </p>
+                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span> <span class="msg"></span>
+                    </div>
 
-                    <button type='submit' name='registerButton'>SIGN UP</button>
+                    <button id='registerButton' type='submit' name='registerButton'>SIGN UP</button>
                 
                     <div class="hasAccountText">
 						<span id="hideRegister">Already have an account? Log in here.</span>
