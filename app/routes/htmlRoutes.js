@@ -1,17 +1,32 @@
-const db = require("../models");
 const path = require("path");
 
-module.exports = function(app) {
-    app.get("/", (req, res)=>{
+const isAuthenticated = require("../config/middleware/isAuthenticated");
+
+module.exports = (app) => {
+
+    app.get("/", (req, res) => {
         // res.render('pages/index');
-        res.sendFile(path.join(__dirname, "../public/html/register.html"));
+
+        if (req.user) {
+            res.redirect("/home");
+        }
+        res.render('pages/login');
+
     });
-    app.get("/index", (req, res)=>{
-        res.render('pages/index');
-        // res.sendFile(path.join(__dirname, "../public/html/user.html"));
+
+    app.get("/login", (req, res) => {
+        if (req.user) {
+            res.redirect("/home");
+        }
+        res.render('pages/login');
     });
-    app.get("/search", (req, res)=>{
-        res.render('pages/search');
-        // res.sendFile(path.join(__dirname, "../public/html/user.html"));
+
+    app.get("/home", isAuthenticated, (req, res) => {
+        res.render("pages/home");
     });
-}
+
+    app.get("/search", isAuthenticated, (req, res) => {
+        res.render("pages/search");
+    });
+
+};
