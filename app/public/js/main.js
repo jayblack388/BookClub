@@ -1,6 +1,26 @@
 $(document).ready(()=>{
-    $("#collapseOne, #collapseTwo, #collapseThree, #collapseFour").hide();
+    const list1 = $("#collapseOne");
+    const list2 = $("#collapseTwo");
+    const list3 = $("#collapseThree");
+    const list4 = $("#collapseFour");
+    const listArray = [list1, list2, list3, list4];
+
     $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    $("#collapseOne, #collapseTwo, #collapseThree, #collapseFour").hide();
+    function wrapperOpen(target) {
+
+    }
+    function wrapperClosed(target) {
+
+    }
+
+
+
+    /* $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
@@ -29,16 +49,8 @@ $(document).ready(()=>{
         $("#bigWrapper").attr("data-exp", "toggleFour");
         $("#bigWrapper").toggleClass("toggled");
         $("#collapseFour").slideToggle();
-    });
+    }); */
 })
-
-
-
-if ( $("#bigWrapper").attr("data-exp", this.id) ) {
-    $("#bigWrapper").addClass("toggled");
-} else {
-    
-}
 
 // On click, set other buttons data state to closed
 // check if button has data state open/close
