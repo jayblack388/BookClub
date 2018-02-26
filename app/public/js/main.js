@@ -10,20 +10,15 @@ $(document).ready(()=>{
         $("#wrapper").toggleClass("toggled");
     });
 
-    $("#collapseOne, #collapseTwo, #collapseThree, #collapseFour").hide();
+    /* $("#collapseOne, #collapseTwo, #collapseThree, #collapseFour").hide();
     function wrapperOpen(target) {
 
     }
     function wrapperClosed(target) {
 
-    }
+    } */
 
 
-
-    /* $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
     $("#toggleOne").click(function(e) {
         e.preventDefault();
         console.log($("#bigWrapper").attr("data-exp"));
@@ -49,7 +44,7 @@ $(document).ready(()=>{
         $("#bigWrapper").attr("data-exp", "toggleFour");
         $("#bigWrapper").toggleClass("toggled");
         $("#collapseFour").slideToggle();
-    }); */
+    });
 })
 
 // On click, set other buttons data state to closed
