@@ -12,7 +12,7 @@ module.exports = (app) => {
             email: req.body.email,
             password: req.body.password
         }).then( () => {
-            res.redirect(307, "api/login");
+            res.redirect(307, "/api/login");
         }).catch((err) => {
             console.log(err);
             res.json(err);

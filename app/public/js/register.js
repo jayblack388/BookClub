@@ -41,7 +41,6 @@ $(document).ready(()=>{
                 email: email,
                 password: password
             }).then((data) => {
-                console.log(data);
                 window.location.replace(data);
             }).catch((err) => {
                 console.log(err);
@@ -49,7 +48,7 @@ $(document).ready(()=>{
         }
     // Register Function
         regForm.on("submit", (event) => {
-            event.preventDefault();
+            event.preventDefault(event);
 
             const userData = {
                 email: regInput.val().trim(),
