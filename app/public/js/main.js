@@ -1,52 +1,118 @@
 $(document).ready(()=>{
-    const list1 = $("#collapseOne");
-    const list2 = $("#collapseTwo");
-    const list3 = $("#collapseThree");
-    const list4 = $("#collapseFour");
-    const listArray = [list1, list2, list3, list4];
+
+    $("#collapseOne").hide();
+    $("#collapseTwo").hide();
+    $("#collapseThree").hide();
+    $("#collapseFour").hide();
 
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 
-    /* $("#collapseOne, #collapseTwo, #collapseThree, #collapseFour").hide();
-    function wrapperOpen(target) {
-
-    }
-    function wrapperClosed(target) {
-
-    } */
-
-
     $("#toggleOne").click(function(e) {
         e.preventDefault();
-        console.log($("#bigWrapper").attr("data-exp"));
-        $("#bigWrapper").attr("data-exp", "toggleOne");
-        $("#bigWrapper").toggleClass("toggled");
-        $("#collapseOne").slideToggle();
+        let oc = $("#collapseOne").attr("data-oc");
+        if (oc === "0") {
+            if ($("#bigWrapper").hasClass("toggled")) {
+                $("#collapseTwo").hide();
+                $("#collapseTwo").attr("data-oc", "0");
+                $("#collapseThree").hide();
+                $("#collapseThree").attr("data-oc", "0");
+                $("#collapseFour").hide();
+                $("#collapseFour").attr("data-oc", "0");
+                
+                $("#collapseOne").show();
+                $("#collapseOne").attr("data-oc", "1");
+            } else {
+                $("#bigWrapper").addClass("toggled");
+                $("#collapseOne").show();
+                $("#collapseOne").attr("data-oc", "1");
+            }
+        } else if (oc === "1") {
+            $("#collapseOne").slideDown();
+            $("#bigWrapper").removeClass("toggled");
+            $("#collapseOne").attr("data-oc", "0");
+        }
     });
     $("#toggleTwo").click(function(e) {
         e.preventDefault();
-        $("#bigWrapper").attr("data-exp", "toggleTwo");
-        $("#bigWrapper").toggleClass("toggled");
-        $("#collapseTwo").slideToggle();
+        let oc = $("#collapseTwo").attr("data-oc");
+        if (oc === "0") {
+            if ($("#bigWrapper").hasClass("toggled")) {
+                $("#collapseOne").hide();
+                $("#collapseOne").attr("data-oc", "0");
+                $("#collapseThree").hide();
+                $("#collapseThree").attr("data-oc", "0");
+                $("#collapseFour").hide();
+                $("#collapseFour").attr("data-oc", "0");
+                
+                $("#collapseTwo").show();
+                $("#collapseTwo").attr("data-oc", "1");
+    
+            } else {
+                $("#bigWrapper").addClass("toggled");
+                $("#collapseTwo").show();
+                $("#collapseTwo").attr("data-oc", "1");
+            }
+        } else if (oc === "1") {
+            $("#collapseTwo").slideDown();
+            $("#bigWrapper").removeClass("toggled");
+            $("#collapseTwo").attr("data-oc", "0");
+        }
+        
     });
     $("#toggleThree").click(function(e) {
         e.preventDefault();
-        $("#bigWrapper").attr("data-exp", "toggleThree");
-        $("#bigWrapper").toggleClass("toggled");
-        $("#collapseThree").slideToggle();
+        let oc = $("#collapseThree").attr("data-oc");
+        if (oc === "0") {
+            if ($("#bigWrapper").hasClass("toggled")) {
+                $("#collapseTwo").hide();
+                $("#collapseTwo").attr("data-oc", "0");
+                $("#collapseOne").hide();
+                $("#collapseOne").attr("data-oc", "0");
+                $("#collapseFour").hide();
+                $("#collapseFour").attr("data-oc", "0");
+                
+                $("#collapseThree").show();
+                $("#collapseThree").attr("data-oc", "1");
+    
+            } else {
+                
+                $("#bigWrapper").addClass("toggled");
+                $("#collapseThree").show();
+                $("#collapseThree").attr("data-oc", "1");
+            }
+        } else if (oc === "1") {
+            $("#collapseThree").slideDown();
+            $("#bigWrapper").removeClass("toggled");
+            $("#collapseThree").attr("data-oc", "0");
+        }
+        
     });
     $("#toggleFour").click(function(e) {
         e.preventDefault();
-        console.log(this.id);
-        $("#bigWrapper").attr("data-exp", "toggleFour");
-        $("#bigWrapper").toggleClass("toggled");
-        $("#collapseFour").slideToggle();
+        let oc = $("#collapseFour").attr("data-oc");
+        if (oc === "0") {
+            if ($("#bigWrapper").hasClass("toggled")) {
+                $("#collapseTwo").hide();
+                $("#collapseTwo").attr("data-oc", "0");
+                $("#collapseThree").hide();
+                $("#collapseThree").attr("data-oc", "0");
+                $("#collapseOne").hide();
+                $("#collapseOne").attr("data-oc", "0");
+                
+                $("#collapseFour").show();
+                $("#collapseFour").attr("data-oc", "1");    
+            } else {
+                $("#bigWrapper").addClass("toggled");
+                $("#collapseFour").show();
+                $("#collapseFour").attr("data-oc", "1");
+            }
+        } else if (oc === "1") {
+            $("#collapseFour").slideDown();
+            $("#bigWrapper").removeClass("toggled");
+            $("#collapseFour").attr("data-oc", "0");
+        }        
     });
 })
-
-// On click, set other buttons data state to closed
-// check if button has data state open/close
-// Click button, set data state (open/close) to button->
