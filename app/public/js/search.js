@@ -78,10 +78,7 @@ const returnResults = (results) => {
             bookDiv.append(leftDiv);
             bookDiv.append(rightDiv);
 
-
-
             $("#resultsContainer").append(bookDiv);
-            console.log(`Title: ${b.title}, Author: ${b.author}, Description: ${b.descrip}, ThumbURL: ${b.thumb} `)
         }
     }
 }

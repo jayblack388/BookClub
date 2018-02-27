@@ -22,7 +22,7 @@ module.exports = (app) => {
     });
 
     app.get("/home", isAuthenticated, (req, res) => {
-        res.render("pages/home");
+        res.render("pages/search");
     });
 
     app.get("/search", isAuthenticated, (req, res) => {
