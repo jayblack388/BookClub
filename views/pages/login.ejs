@@ -1,77 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <% include ../partials/head %>
-        <link rel="stylesheet" href="/static/css/register.css">
-        <script src="/static/js/register.js"></script>
+    <title>Login V3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+    <link rel="icon" type="image/png" href="static/register/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="static/register/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="static/register/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="static/register/css/util.css">
+    <link rel="stylesheet" type="text/css" href="static/register/css/main.css">
+<!--===============================================================================================-->
 </head>
-
 <body>
-    <div id="background">
-
-        <div id="loginContainer">
-
-            <div id='inputContainer'>
-                <form id='loginForm'>
-                    <h2>Login to your account</h2>
-                    <div class="form-group">
-                        <label for="loginUsername">Username</label>
-                        <input class="form-control" id='loginUsername' name='loginUsername' type='email' placeholder='e.g. johnDoe' required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input class="form-control" id='loginPassword' name='loginPassword' type='password' placeholder='Your Password' required>
-                    </div>
-
-                    <button id='loginButton' type='submit' name='loginButton'>LOG IN</button>
-
-                    <div class="hasAccountText">
-                        <span id="hideLogin">Don't have an account yet? Signup here.</span>
-                    </div>
-
-                </form>
-
-                <form action="/api/signup" id='registerForm' method='POST'>
-                    <h2>Create a free account</h2>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-control" id='email' name='email' type='email' placeholder='e.g. johnDoe@gmail.com' required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input class="form-control" id='password' name='password' type='password' placeholder='Your Password' required>
-                    </div>
-
-                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        <span class="msg"></span>
-                    </div>
-
-                    <button id='registerButton' type='submit' name='registerButton'>SIGN UP</button>
-
-                    <div class="hasAccountText">
-                        <span id="hideRegister">Already have an account? Log in here.</span>
-                    </div>
-
-                </form>
-            </div>
-
-            <div id="loginText">
-                <h1>Join the fastest growing literary social network</h1>
-                <h2>Connect with friends over your favorite books</h2>
-                <ul>
-                    <li>Find books that you enjoy</li>
-                    <li>Create Book-a-Thon challenges for your friends</li>
-                    <li>Cooridnate book clubs with your friends</li>
+    
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('static/register/images/bg-01.jpg');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-logo">
+                        <img src="static/register/images/blogo.png" alt="IMG">
+                    </span>
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        BOOKATHON
+                    </span>
+                    <span class="login100-form-description">
+                        Join the fastest growing literary social network
+                    </span>
+                    <span class="login101-form-description p-b-35">
+                        Connect with friends over your favorite books
+                    </span>
+                    <span class="login102-form-description">
+                         <ul>
+                    <li><img src="https://png.icons8.com/nolan/50/000000/books.png" class="booklogo">Find books that you enjoy</li>
+                    <li><img src="https://png.icons8.com/nolan/50/000000/books.png" class="booklogo">Challenge your friends to read a book</li>
+                    <li><img src="https://png.icons8.com/nolan/50/000000/books.png" class="booklogo">Cooridnate book clubs with your friends</li>
                 </ul>
+                    </span>
+                </form>
             </div>
+            <div class="wrap-login101">
+                <form class="login100-form validate-form">
+            
 
+                    <span class="login100-form-login p-b-33 p-t-27">
+                        Create a free account
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Enter username">
+                        <input class="input100" type="text" name="username" placeholder="Username">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Sign up
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-90">
+                        <a class="txt1" href="#">
+                            Already have an account? Log in here.
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</body>
+    
 
+    <div id="dropDownSelect1"></div>
+    
+<!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
 </html>
