@@ -9,6 +9,8 @@ $(document).ready(()=>{
     let regInput = $("#email");
     let regPass = $("#password");
 
+    loginForm.hide();
+
     $("#hideLogin").click(()=>{
         loginForm.hide();
         regForm.show();

@@ -4,28 +4,29 @@
     <title>Login V3</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->  
-    <link rel="icon" type="image/png" href="static/register/images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/vendor/animate/animate.css">
-<!--===============================================================================================-->  
-    <link rel="stylesheet" type="text/css" href="static/register/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/vendor/select2/select2.min.css">
-<!--===============================================================================================-->  
-    <link rel="stylesheet" type="text/css" href="static/register/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="static/register/css/util.css">
-    <link rel="stylesheet" type="text/css" href="static/register/css/main.css">
-<!--===============================================================================================-->
+    <!--===============================================================================================-->  
+        <link rel="icon" type="image/png" href="static/register/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/vendor/animate/animate.css">
+    <!--===============================================================================================-->  
+        <link rel="stylesheet" type="text/css" href="static/register/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->  
+        <link rel="stylesheet" type="text/css" href="static/register/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="static/register/css/util.css">
+        <link rel="stylesheet" type="text/css" href="static/register/css/main.css">
+    <!--===============================================================================================-->
+        <script src="/static/js/register.js" ></script>
 </head>
 <body>
     
@@ -55,7 +56,7 @@
                 </form>
             </div>
             <div class="wrap-login101">
-                <form class="login100-form validate-form">
+                <form id="registerForm" class="login100-form validate-form">
             
 
                     <span class="login100-form-login p-b-33 p-t-27">
@@ -63,12 +64,12 @@
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate = "Enter username">
-                        <input class="input100" type="text" name="username" placeholder="Username">
+                        <input id= "email" class="input100" type="text" name="username" placeholder="Username">
                         <span class="focus-input100" data-placeholder="&#xf207;"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <input id="password" class="input100" type="password" name="pass" placeholder="Password">
                         <span class="focus-input100" data-placeholder="&#xf191;"></span>
                     </div>
 
@@ -80,15 +81,51 @@
                     </div>
 
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <button id="registerButton" type="submit" class="login100-form-btn">
                             Sign up
                         </button>
                     </div>
 
                     <div class="text-center p-t-90">
-                        <a class="txt1" href="#">
+                        <span id="hideRegister">
                             Already have an account? Log in here.
-                        </a>
+                        </span>
+                    </div>
+                </form>
+                <form id="loginForm" class="login100-form validate-form">
+            
+
+                    <span class="login100-form-login p-b-33 p-t-27">
+                        Login to your account
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Enter username">
+                        <input id="loginUsername" class="input100" type="text" name="username" placeholder="Username">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input id="loginPassword" class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button id="loginButton" type="submit" class="login100-form-btn">
+                            Sign up
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-90">
+                        <span id="hideLogin">
+                            Already have an account? Log in here.
+                        </span>
                     </div>
                 </form>
             </div>
