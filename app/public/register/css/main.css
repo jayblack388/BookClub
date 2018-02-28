@@ -194,7 +194,7 @@ iframe {
   width: 500px;
   overflow: hidden;
   padding: 55px 55px 37px 55px;
-  background: -webkit-linear-gradient(top, #9a4594a3, #16081de0);
+  background: -webkit-linear-gradient(left, #9a4594a3, #16081de0);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -202,7 +202,7 @@ iframe {
   width: 500px;
   overflow: hidden;
   padding: 55px 55px 37px 55px;
-  background: -webkit-linear-gradient(top, #9a4594, #16081d);
+  background: -webkit-linear-gradient(left, #9a4594, #16081d);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -210,7 +210,7 @@ iframe {
   width: 500px;
   overflow: hidden;
   padding: 55px 55px 37px 55px;
-  background: -webkit-linear-gradient(top, #16081dab, #9a4594a3);
+  background: -webkit-linear-gradient(left, #1d061ba3, #1b3046);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -218,7 +218,7 @@ iframe {
   width: 500px;
   overflow: hidden;
   padding: 55px 55px 37px 55px;
-  background: -webkit-linear-gradient(top, #16081d, #9a4594);
+  background: -webkit-linear-gradient(left, #1d061b, #1b3046);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -604,5 +604,3 @@ iframe {
     opacity: 1;
   }
 }
-
-
