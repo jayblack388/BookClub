@@ -18,9 +18,19 @@ fs
   .readdirSync(__dirname)
   .filter(function (file) {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
+  }).sort((a,b)=>{
+    if (a === "favorites.js") {
+      return 1;
+    } else if (b === "favorites.js") {
+      return -1;
+    } else {
+      return 0;
+    }
   })
   .forEach(function (file) {
+    console.log(file)
     var model = sequelize['import'](path.join(__dirname, file));
+    console.log
     db[model.name] = model;
   });
 
