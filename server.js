@@ -26,6 +26,13 @@ require("./app/routes/htmlRoutes.js")(app);
 
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
+    // db.Book.belongsToMany(db.User, {through: "favorites"})
+    // db.User.belongsToMany(db.Book, {through: "favorites"})
+    // db.Book.belongsToMany(db.User, {through: "nowReading"})
+    // db.User.belongsToMany(db.Book, {through: "nowReading"})
+    // db.Book.belongsToMany(db.User, {through: "prevRead"})
+    // db.User.belongsToMany(db.Book, {through: "prevRead"})
+
     console.log("App listening on PORT " + PORT);
   });
 });
