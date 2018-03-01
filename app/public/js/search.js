@@ -124,7 +124,7 @@ const returnResults = (results) => {
             bookDiv.append(leftDiv);
             bookDiv.append(rightDiv);
     
-            
+            console.log(req.user)
             $("#resultsContainer").append(bookDiv);
         }
     }
