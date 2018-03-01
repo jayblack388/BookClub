@@ -10,7 +10,7 @@ module.exports = (app) => {
         if (req.user) {
             res.redirect("/home");
         }
-        res.render('pages/search');
+        res.render('pages/login');
 
     });
 

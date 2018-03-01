@@ -525,6 +525,15 @@ iframe {
   opacity: 0;
 }
 
+#loginForm {
+  display: none;
+}
+
+#inputContainer button:hover,
+.hasAccountText span {
+    cursor: pointer;
+    color: #fff;
+}
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
