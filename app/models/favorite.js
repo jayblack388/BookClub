@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes)=> {
-    let Favorite = sequelize.define("favorite", {
+    let Favorite = sequelize.define("Favorite", {
 
     })
     // User.belongsToMany(Book, {through: Favorite});
