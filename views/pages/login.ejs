@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/loginHead.ejs %>
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('static/register/images/bg-01.jpg');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-logo">
+                        <img src="static/register/images/blogo.png" alt="IMG">
+                    </span>
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        BOOKATHON
+                    </span>
+                    <span class="login100-form-description">
+                        Join the fastest growing literary social network
+                    </span>
+                    <span class="login101-form-description p-b-35">
+                        Connect with friends over your favorite books
+                    </span>
+                    <span class="login102-form-description">
+                        <ul>
+                            <li>
+                                <img src="https://png.icons8.com/nolan/50/000000/books.png" class="booklogo">Find books that you enjoy</li>
+                            <li>
+                                <img src="https://png.icons8.com/nolan/50/000000/books.png" class="booklogo">Challenge your friends to read a book</li>
+                            <li>
+                                <img src="https://png.icons8.com/nolan/50/000000/books.png" class="booklogo">Cooridnate book clubs with your friends</li>
+                        </ul>
+                    </span>
+                </form>
+            </div>
+            <div class="wrap-login101">
+                <form id="registerForm" class="login100-form validate-form">
+
+
+                    <span class="login100-form-login p-b-33 p-t-27">
+                        Create a free account
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                        <input id="email" class="input100" type="text" name="username" placeholder="Username">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input id="password" class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button id="registerButton" type="submit" class="login100-form-btn">
+                            Sign up
+                        </button>
+                    </div>
+
+                    <div class="hasAccountText text-center p-t-90">
+                        <span id="hideRegister">
+                            Already have an account? Log in here.
+                        </span>
+                    </div>
+                </form>
+                <form id="loginForm" class="login100-form validate-form">
+
+
+                    <span class="login100-form-login p-b-33 p-t-27">
+                        Login to your account
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                        <input id="loginUsername" class="input100" type="text" name="username" placeholder="Username">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <input id="loginPassword" class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb2" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb2">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button id="loginButton" type="submit" class="login100-form-btn">
+                            Log In
+                        </button>
+                    </div>
+
+                    <div class="hasAccountText text-center p-t-90">
+                        <span id="hideLogin">
+                            Need an account? Sign up here.
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+</body>
+
+</html>

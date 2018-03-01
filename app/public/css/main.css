@@ -1,0 +1,54 @@
+html, body {
+    padding:0;
+    margin:0;
+    height: 100%;
+}
+body {
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* color:#fff; */
+}
+
+body {
+    background-color: #74AFAD;
+    font-size: 14px;
+    min-width: 720px;
+}
+
+#topContainer {
+    min-height: 100%;
+    width: 100%;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+.img-fluid {
+    max-width: 100px;
+}
+
+.nav-bg {
+    background: #d9853b;
+}
+
+.btn-color {
+    background-color: #ececea;
+    color: #74AFAD;
+}
+
+.btn-color:hover {
+    background-color: #558C89;
+}
+
+@media(min-width:768px) {
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+}
