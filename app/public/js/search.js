@@ -57,10 +57,10 @@ const returnResults = (results) => {
                         Add to Lists
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item pushToLists" href="#">To Read</a>
-                        <a class="dropdown-item pushToLists" href="#">Currently Reading</a>
-                        <a class="dropdown-item pushToLists" href="#">Previously Read</a>
-                        <a class="dropdown-item pushToLists" href="#">Favorites</a>
+                        <a class="dropdown-item pushToLists" onclick= "futures()" href="#">Future Reads</a>
+                        <a class="dropdown-item pushToLists" onclick= "currents()" href="#">Current Reads</a>
+                        <a class="dropdown-item pushToLists" onclick= "previous()" href="#">Previous Reads</a>
+                        <a class="dropdown-item pushToLists" onclick= "favorites()" href="#">Favorites</a>
                     </div>
                 </div>
             </div>`)
