@@ -25,10 +25,16 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color:#fff;
+    text-decoration: none;
+}
+
 html, body {
     padding:0;
     margin:0;
     height: 100%;
+    font-family: Poppins-Medium;
 }
 body {
     overflow-x: hidden;
@@ -58,19 +64,20 @@ body {
 
 .nav-bg {
     background: #3f3d56;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-color {
     border: 0;
-    color: #FFE;
-    padding: 15px 30px;
+    color: #fff;
+    padding: 10px 40px;
     background: -webkit-gradient(linear, left top, left bottom, from(#bc60f6), to(#9873d4));
-    background: linear-gradient(#bc60f6, #9873d4);
-    border-radius: 60px;
+    background: #633d9a;
+    /* border-radius: 60px; */
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
-
+    margin: 10px;
 }
 
 
@@ -78,6 +85,7 @@ body {
     border: 0;
     color: #FFE;
     padding: 15px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: -webkit-gradient(linear, left top, left bottom, from(#bc60f6), to(#9873d4));
     background: linear-gradient(#bc60f6, #9873d4);
     border-radius: 60px;
