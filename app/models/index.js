@@ -19,18 +19,16 @@ fs
   .filter(function (file) {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   }).sort((a,b)=>{
-    if (a === "favorites.js") {
+    if (a === "favorites.js" || a === "futures.js" || a === "currents.js" || a === "previous.js" ) {
       return 1;
-    } else if (b === "favorites.js") {
+    } else if (b === "favorites.js" || b === "futures.js" || b === "currents.js" || b === "previous.js" ) {
       return -1;
     } else {
       return 0;
     }
   })
   .forEach(function (file) {
-    console.log(file)
     var model = sequelize['import'](path.join(__dirname, file));
-    console.log
     db[model.name] = model;
   });
 
@@ -45,5 +43,5 @@ db.Sequelize = Sequelize;
 
 /* db.Book.belongsToMany(db.User, {through: 'favorite'});
 db.User.belongsToMany(db.Book, {through: 'favorite'}); */
-
+console.log( db.modelName)
 module.exports = db;

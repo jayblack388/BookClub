@@ -17,7 +17,15 @@ function send(index, route) {
         description: $("#description-" + index).text(),
         thumbnail: $("#img-" + index).attr("src")
     }
-    console.log($("#description-3").html())
+    const test = $("#title-0")
+    console.log(dataObj);
+    $.ajax({
+      url: `add/books/${route}`,
+      method: "POST",
+      data: dataObj
+    }).done((results)=>{
+        console.log("added to list")
+    })
 }
 
 const search = (queryUrl) => {
@@ -57,7 +65,7 @@ const returnResults = (results) => {
             let rightDiv = $("<div class='col-md-4 rightBookDiv'>");
             let divTitle = $(`<h3 class='resultTitle' id="title-${i}">Title: ${b.title} </h3>`);
             let divAuthor = $(`<h4 class='resultAuthor' id="author-${i}">Author: ${b.author} </h4>`);
-            let divDescrip = $(`<p class='resultDescription id="description-${i}"'>Description: ${b.descrip} </p>`);
+            let divDescrip = $(`<p class='resultDescription' id="description-${i}">Description: ${b.descrip} </p>`);
             let divImage = $(`<img id="img-${i}" class='img-fluid'>`).attr("src", b.thumb);
             let buttons = $(`
             <div class="btn-group" role="group" id="buttons-${i}" aria-label="Search Result Buttons">
@@ -67,10 +75,10 @@ const returnResults = (results) => {
                         Add to Lists
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item pushToLists" data-index="${i}" id="future-${i}" onclick="send(${i}, 'future')" href="#">Future Reads</a>
-                        <a class="dropdown-item pushToLists" data-index="${i}" id="current-${i}" onclick="send(${i}, 'current')" href="#">Current Reads</a>
-                        <a class="dropdown-item pushToLists" data-index="${i}" id="previous-${i}" onclick="send(${i}, 'previous')" href="#">Previous Reads</a>
-                        <a class="dropdown-item pushToLists" data-index="${i}" id="favorite-${i}" onclick="send(${i}, 'favorite')" href="#">Favorites</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'futures')" href="#">Future Reads</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'currents')" href="#">Current Reads</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'previous')" href="#">Previous Reads</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'favorites')" href="#">Favorites</a>
                     </div>
                 </div>
             </div>`)

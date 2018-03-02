@@ -1,5 +1,6 @@
 const db = require("../models");
 const passport = require("../config/passport");
+var route;
 
 module.exports = (app) => {
 
@@ -35,5 +36,20 @@ module.exports = (app) => {
             });
         }
     });
+
+    app.post("/add/books/:route?", (req, res)=> {
+        route = req.params.route;
+        console.log(route)
+        db.Book.create({
+            title: req.body.title,
+            author: req.body.author,
+            description: req.body.description,
+            thumbnail: req.body.thumb
+        }).then((book) => {
+            app.post(`/add/${route}`, (childReq, childRes) => {
+                
+            })
+        })
+    })
 
 };
