@@ -10,6 +10,16 @@ $(document).ready(()=>{
     })
 })
 
+function send(index, route) {
+    const dataObj = {
+        title: $("#title-" + index).text(),
+        author: $("#author-" + index).text(),
+        description: $("#description-" + index).text(),
+        thumbnail: $("#img-" + index).attr("src")
+    }
+    console.log($("#description-3").html())
+}
+
 const search = (queryUrl) => {
     $.ajax({
         url: queryUrl,
@@ -41,26 +51,26 @@ const returnResults = (results) => {
                 descrip : iLoopData.description,
                 thumb : thumbnail
             }
-            let bookDiv = $("<div class='row searchResult'>");
+            let bookDiv = $(`<div class='row searchResult'>`);
             bookDiv.attr("id", "result-" + i);
             let leftDiv = $("<div class='col-md-8 leftBookDiv'>");
             let rightDiv = $("<div class='col-md-4 rightBookDiv'>");
-            let divTitle = $(`<h3 class='resultTitle'>Title: ${b.title} </h3>`);
-            let divAuthor = $(`<h4 class='resultAuthor'>Author: ${b.author} </h4>`);
-            let divDescrip = $(`<p class='resultDescription'>Description: ${b.descrip} </p>`);
-            let divImage = $("<img class='img-fluid'>").attr("src", b.thumb);
+            let divTitle = $(`<h3 class='resultTitle' id="title-${i}">Title: ${b.title} </h3>`);
+            let divAuthor = $(`<h4 class='resultAuthor' id="author-${i}">Author: ${b.author} </h4>`);
+            let divDescrip = $(`<p class='resultDescription id="description-${i}"'>Description: ${b.descrip} </p>`);
+            let divImage = $(`<img id="img-${i}" class='img-fluid'>`).attr("src", b.thumb);
             let buttons = $(`
-            <div class="btn-group" role="group" aria-label="Search Result Buttons">
+            <div class="btn-group" role="group" id="buttons-${i}" aria-label="Search Result Buttons">
                 <button type="button" class="btn btn-secondary">Create a BookAThon</button>          
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Add to Lists
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item pushToLists" onclick= "futures()" href="#">Future Reads</a>
-                        <a class="dropdown-item pushToLists" onclick= "currents()" href="#">Current Reads</a>
-                        <a class="dropdown-item pushToLists" onclick= "previous()" href="#">Previous Reads</a>
-                        <a class="dropdown-item pushToLists" onclick= "favorites()" href="#">Favorites</a>
+                        <a class="dropdown-item pushToLists" data-index="${i}" id="future-${i}" onclick="send(${i}, 'future')" href="#">Future Reads</a>
+                        <a class="dropdown-item pushToLists" data-index="${i}" id="current-${i}" onclick="send(${i}, 'current')" href="#">Current Reads</a>
+                        <a class="dropdown-item pushToLists" data-index="${i}" id="previous-${i}" onclick="send(${i}, 'previous')" href="#">Previous Reads</a>
+                        <a class="dropdown-item pushToLists" data-index="${i}" id="favorite-${i}" onclick="send(${i}, 'favorite')" href="#">Favorites</a>
                     </div>
                 </div>
             </div>`)
