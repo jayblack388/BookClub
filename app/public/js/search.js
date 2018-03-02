@@ -1,4 +1,6 @@
 let baseUrl = "https://www.googleapis.com/books/v1/volumes?key=AIzaSyATR98NOOmNhPqze9roauhIlfrEnHVDTEE&q="
+let bookArray = [];
+
 $(document).ready(()=>{
     $("#searchSubmit").on("click", (event)=>{
         event.preventDefault();
@@ -11,18 +13,10 @@ $(document).ready(()=>{
 })
 
 function send(index, route) {
-    const dataObj = {
-        title: $("#title-" + index).text(),
-        author: $("#author-" + index).text(),
-        description: $("#description-" + index).text(),
-        thumbnail: $("#img-" + index).attr("src")
-    }
-    const test = $("#title-0")
-    console.log(dataObj);
     $.ajax({
       url: `add/books/${route}`,
       method: "POST",
-      data: dataObj
+      data: bookArray[index]
     }).done((results)=>{
         console.log("added to list")
     })
@@ -59,13 +53,14 @@ const returnResults = (results) => {
                 descrip : iLoopData.description,
                 thumb : thumbnail
             }
+            bookArray.push(b);
             let bookDiv = $(`<div class='row searchResult'>`);
             bookDiv.attr("id", "result-" + i);
-            let leftDiv = $("<div class='col-md-8 leftBookDiv'>");
-            let rightDiv = $("<div class='col-md-4 rightBookDiv'>");
-            let divTitle = $(`<h3 class='resultTitle' id="title-${i}">Title: ${b.title} </h3>`);
-            let divAuthor = $(`<h4 class='resultAuthor' id="author-${i}">Author: ${b.author} </h4>`);
-            let divDescrip = $(`<p class='resultDescription' id="description-${i}">Description: ${b.descrip} </p>`);
+            let leftDiv = $("<div class='col-md-8 col-sm-12 leftBookDiv'>");
+            let rightDiv = $("<div class='col-md-4 col-sm-12 rightBookDiv'>");
+            let divTitle = $(`<h3 class='resultTitle' id="title-${i}">${b.title} </h3>`);
+            let divAuthor = $(`<h4 class='resultAuthor' id="author-${i}">${b.author} </h4>`);
+            let divDescrip = $(`<p class='resultDescription' id="description-${i}">${b.descrip} </p>`);
             let divImage = $(`<img id="img-${i}" class='img-fluid'>`).attr("src", b.thumb);
             let buttons = $(`
             <div class="btn-group" role="group" id="buttons-${i}" aria-label="Search Result Buttons">
@@ -75,10 +70,10 @@ const returnResults = (results) => {
                         Add to Lists
                     </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'futures')" href="#">Future Reads</a>
-                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'currents')" href="#">Current Reads</a>
-                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'previous')" href="#">Previous Reads</a>
-                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'favorites')" href="#">Favorites</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'Futures')" href="#">Future Reads</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'Currents')" href="#">Current Reads</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'Previous')" href="#">Previous Reads</a>
+                        <a class="dropdown-item pushToLists" onclick="send(${i}, 'Favorites')" href="#">Favorites</a>
                     </div>
                 </div>
             </div>`)

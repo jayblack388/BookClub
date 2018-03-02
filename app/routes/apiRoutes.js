@@ -46,8 +46,10 @@ module.exports = (app) => {
             description: req.body.description,
             thumbnail: req.body.thumb
         }).then((book) => {
-            app.post(`/add/${route}`, (childReq, childRes) => {
-                
+            console.log(route)
+            db[route].create({
+                book_id: book.id,
+                user_id: req.user.id
             })
         })
     })
