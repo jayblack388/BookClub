@@ -23,10 +23,12 @@
 
 
 #search {
-    background-color: #ececea; 
-    height: 18px;
-    font-size: 16px;
-    width: 40%;
+    background-color: #ececea;
+    /* height: 18px; */
+    /* font-size: 16px; */
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 #searchForm button {
@@ -48,7 +50,11 @@
 }
 
 .jumbotron {
-    background: #558C89;
+    background: #dbe0e0;
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    flex-direction:  column;
 }
 
 .searchResult {
