@@ -1,3 +1,30 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+a {
+    text-decoration: none;
+}
+
 html, body {
     padding:0;
     margin:0;
@@ -7,10 +34,6 @@ body {
     overflow-x: hidden;
 }
 
-* {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* color:#fff; */
-}
 
 body {
     background-color: #74AFAD;
@@ -34,12 +57,37 @@ body {
 }
 
 .nav-bg {
-    background: #d9853b;
+    background: #3f3d56;
 }
 
 .btn-color {
-    background-color: #ececea;
-    color: #74AFAD;
+    border: 0;
+    color: #FFE;
+    padding: 15px 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bc60f6), to(#9873d4));
+    background: linear-gradient(#bc60f6, #9873d4);
+    border-radius: 60px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+
+}
+
+
+.btn-color1 {
+    border: 0;
+    color: #FFE;
+    padding: 15px 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bc60f6), to(#9873d4));
+    background: linear-gradient(#bc60f6, #9873d4);
+    border-radius: 60px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+
 }
 
 .btn-color:hover {
