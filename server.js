@@ -29,3 +29,15 @@ db.sequelize.sync().then(() => {
      console.log("App listening on PORT " + PORT);
   });
 });
+
+
+if (process.env.JAWSDB_URL) {
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+	} else {
+		conneciton = mysql.createConnection({
+			host:'localhost',
+			user: 'root',
+			password: 'Vic09865',
+			database: 'BookClub'
+		});
+	};
