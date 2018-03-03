@@ -41,7 +41,6 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-/* db.Book.belongsToMany(db.User, {through: 'favorite'});
-db.User.belongsToMany(db.Book, {through: 'favorite'}); */
-console.log( db.modelName)
+db.Book.belongsToMany(db.User, {through: 'favorites', foreignKey: 'user_id'});
+db.User.belongsToMany(db.Book, {through: 'favorites', foreignKey: 'book_id'});
 module.exports = db;
