@@ -8,6 +8,8 @@ const ejs = require("ejs");
 const passport = require("./app/config/passport");
 const PORT = process.env.PORT || 8080;
 const db = require("./app/models");
+const mysql = require('mysql');
+var conneciton; 
 
 const app = express();
 
