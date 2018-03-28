@@ -8,8 +8,7 @@ const ejs = require("ejs");
 const passport = require("./app/config/passport");
 const PORT = process.env.PORT || 8080;
 const db = require("./app/models");
-const mysql = require('mysql');
-var conneciton; 
+
 
 const app = express();
 
@@ -31,15 +30,3 @@ db.sequelize.sync().then(() => {
      console.log("App listening on PORT " + PORT);
   });
 });
-
-
-if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(process.env.JAWSDB_URL);
-	} else {
-		conneciton = mysql.createConnection({
-			host:'localhost',
-			user: 'root',
-			password: 'Vic09865',
-			database: 'BookClub'
-		});
-	};
